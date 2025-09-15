@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	// key => value pairv
+	// key => value pair
 	// array index 0 => David :: names[0]
 	// array index 1 => Timo  :: names[1]
 	// array index 2 => Max   :: names[2]
