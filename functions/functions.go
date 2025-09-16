@@ -9,6 +9,10 @@ func main() {
 	b := 200
 	sum := CalculateSum(a, b)
 	fmt.Printf("The sum of %d and %d is %d\n", a, b, sum)
+
+	x, y := 5, 10
+	x, y = SwapNumbers(x, y)
+	fmt.Printf("After swapping: x = %d, y = %d\n", x, y)
 }
 
 func PrintGreeting(name string) {
@@ -17,4 +21,8 @@ func PrintGreeting(name string) {
 
 func CalculateSum(a, b int) int {
 	return a + b
+}
+
+func SwapNumbers(x, y int) (int, int) {
+	return y, x
 }
