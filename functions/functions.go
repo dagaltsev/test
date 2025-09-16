@@ -26,3 +26,7 @@ func CalculateSum(a, b int) int {
 func SwapNumbers(x, y int) (int, int) {
 	return y, x
 }
+
+// create function to calculate sum for 5 integers
+
+// create func to accept name and age and print "Hello <name>, you are <age> years old"
