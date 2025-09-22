@@ -10,10 +10,6 @@ type Person struct {
 }
 
 func main() {
-	var persons []Person
-
-	//fmt.Println(persons)
-
 	// Create David person object
 	david := Person{
 		Name:     "David",
@@ -21,9 +17,6 @@ func main() {
 		Age:      16,
 		Email:    "david.agaltsev@example.com",
 	}
-
-	// Add david to persons slice
-	persons = append(persons, david)
 
 	// Create Timo person object
 	timo := Person{
@@ -33,10 +26,24 @@ func main() {
 		Email:    "timo.agaltsev@example.com",
 	}
 
-	// Add Timo to persons slice
-	persons = append(persons, timo)
+	// Create Max person object
+	max := Person{
+		Name:     "Max",
+		Lastname: "Agaltsev",
+		Age:      23,
+		Email:    "max.agaltsev@example.com",
+	}
 
-	fmt.Println(GeneratePersons())
+	sabina := Person{
+		Name:     "Sabina",
+		Lastname: "Agaltsev",
+		Age:      44,
+		Email:    "sabina.agaltsev@example.com",
+	}
+
+	list := GeneratePersonsList(david, timo, max, sabina)
+
+	fmt.Println(list)
 }
 
 // Deliver 5 Persons (David, Timo, Max, Sabina, Stani)
@@ -89,4 +96,11 @@ func GeneratePersons() []Person {
 	persons = append(persons, Stani)
 
 	return persons
+}
+
+func GeneratePersonsList(persons ...Person) []Person {
+	var list []Person
+	list = append(list, persons...)
+
+	return list
 }
