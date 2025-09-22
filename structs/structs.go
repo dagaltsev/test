@@ -1,12 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"encoding/json"
+	"fmt"
+)
 
 type Person struct {
-	Name     string
-	Lastname string
-	Age      int
-	Email    string
+	Name     string `json:"name"`
+	Lastname string `json:"lastname"`
+	Age      int    `json:"age"`
+	Email    string `json:"email"`
 }
 
 func main() {
@@ -43,7 +46,9 @@ func main() {
 
 	list := GeneratePersonsList(david, timo, max, sabina)
 
-	fmt.Println(list)
+	out, _ := json.Marshal(list)
+
+	fmt.Println(string(out))
 }
 
 // Deliver 5 Persons (David, Timo, Max, Sabina, Stani)
